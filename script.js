@@ -12,15 +12,33 @@ const jokelines = {
     'Canoe come out and play with me?', 'Lettuce in, it’s cold out here!', 
     'Mikey doesn’t fit in the key hole!', 'Nobel…that’s why I knocked!', 'You’re welcome.', 'Figs the doorbell, it’s not working!', 'Annie thing you can do, I can do too!', 'No, a cow says mooooo!', 'Hal will you know if you don’t open the door?', 'Alice fair in love and war.', 'Says me!', 'Honey bee a dear and get that for me please!', 'Euripides clothes, you pay for them!', 'Snow use. The joke is over.', 'I’m good. Hawaii you?', 'Glad you’re excited, too!', 'Orange you going to let me in?', 'I didn’t know you were an owl!', 'Let me in! Anita borrow something.', 'Water you doing telling jokes right now? Don’t you have things to do?'],
 }
-//function for randomly giving the part of an array
+//function for randomly giving an element of an array
 const randArray = array => array[Math.floor(Math.random()*array.length)];
 // function to put together the 3 parts  of the joke
-const jokeGenerator = array => {
+const jokeGenerator = object => {
     console.log(`Knock Knock.`);
     console.log(`Who's there?`);
+    for (let i in object) {
+        switch (i) {
+            case 'name':
+                console.log(randArray(object[i]));
+                break
+            case 'who':
+                console.log(randArray(object[i]));
+                break
+            case 'punch':
+                console.log(randArray(object[i]));
+                break
+        }
+    }
+}
+
+
+/*
+
     console.log(`${randArray(array.name)}`);
     console.log(`${randArray(array.who)}`);
     console.log(`${randArray(array.punch)}`);
-}
+}*/
 //console.log(randArray(jokelines.name));
 jokeGenerator(jokelines);
