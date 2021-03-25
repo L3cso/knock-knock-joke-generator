@@ -19,26 +19,7 @@ const jokeGenerator = object => {
     console.log(`Knock Knock.`);
     console.log(`Who's there?`);
     for (let i in object) {
-        switch (i) {
-            case 'name':
                 console.log(randArray(object[i]));
-                break
-            case 'who':
-                console.log(randArray(object[i]));
-                break
-            case 'punch':
-                console.log(randArray(object[i]));
-                break
         }
     }
-}
-
-
-/*
-
-    console.log(`${randArray(array.name)}`);
-    console.log(`${randArray(array.who)}`);
-    console.log(`${randArray(array.punch)}`);
-}*/
-//console.log(randArray(jokelines.name));
 jokeGenerator(jokelines);
